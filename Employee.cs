@@ -1,15 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Company_Project
+﻿namespace Company_Project
 {
     public class Employee
     {
         private string _name;
         private string _surName;
+        private string _userName;
+
+        public Employee(string name, string surname, string username)
+        {
+            Name = name;
+            Surname = surname;
+            Username = username;
+        }
+
         public string Name 
         { 
             get => _name;
@@ -20,15 +23,11 @@ namespace Company_Project
             get => _surName;
             set => _surName = FormatName(value);
         }
-        public string Username { get; set; }
-        public byte Age { get; set; }
-        public Employee(string name, string surname, string username)
+        public string Username
         {
-            Name = name;
-            Surname = surname;
-            Username = username;
+            get => _userName;
+            set => _userName = _name + " " + _surName;
         }
-
         public string FormatName(string name)
         {
             char[] charArray = name.ToCharArray();
