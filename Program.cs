@@ -37,7 +37,7 @@ do
             string inpname = Console.ReadLine();
             if (inpname == employe.Username)
             {
-                Console.WriteLine("User tapildi"); ;
+                Console.WriteLine("User tapildi");
             }
             else
             {
